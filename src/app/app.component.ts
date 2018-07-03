@@ -1,10 +1,18 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import {Leader} from '../shared/leader';
+import {LeaderService} from '../services/leader.service';
+import {LEADERS} from '../shared/leaders';
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-about',
+  templateUrl: './about.component.html',
+  styleUrls: ['./about.component.scss']
 })
-export class AppComponent {
-  title = 'app';
+export class AboutComponent implements OnInit {
+
+  constructor(private LeaderService:LeaderService) { }
+
+  ngOnInit() {
+  }
+  leader=LEADERS;
+  
 }
